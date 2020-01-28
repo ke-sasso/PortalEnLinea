@@ -1,0 +1,92 @@
+<div class="tab-pane fade" id="panel-dtpublicidad">          
+        <form>
+          <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">PUBLICIDAD</h3>
+                  </div>
+                  
+                  <div class="panel-body">
+                    <div class="form-group">
+                      <div class="input-group col-sm-12 col-md-6 col-lg-6">
+                        <div class="input-group-addon">MEDIO: </div>
+                        <select class="form-control" name="idMedio" id="idMedio">
+                            @foreach($medios as $medio)
+                              <option value="{{$medio->idMedio}}" required>{{$medio->nombreMedio}}</option>
+                            @endforeach
+                        </select>
+                      </div>
+                      
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group col-sm-12 col-md-12 col-lg-12">
+                        <div class="input-group-addon">VERSI&Oacute;N:</div>
+                        <input type="text" class="form-control text-uppercase" id="txtVersion" name="version" value="">
+                      </div>
+                    </div>
+                 
+                    
+                      <div class="form-group">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Arte Publicitario</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-group ">
+                                     {!! Form::label('file1', 'Seleccione el Arte', ['class' => 'control-label']) !!}
+                                     {!! Form::file('files[]',['multiple' => 'multiple']) !!}
+                                </div>
+                              </td>
+                            </tr>                 
+                          </tbody>
+                        </table>
+                      </div>
+                    
+                    
+                  </div>
+                  
+                </div>
+                  
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h3 class="panel-title"></h3>
+                  </div>
+                  <div class="panel-body">
+                    <table width="100%" class="table table-stripped table-hover">
+                      
+                      <tr>
+                      <td>
+                        <div class="checkbox">
+                          <label>
+                          
+                            <input type="checkbox"  checked name="tipoDocumento[]" value="" >
+                          
+                          <div class="input-group col-md-10 col-lg-8" >
+                            <div class="input-group-addon">MANDAMIENTO CANCELADO POR DERECHOS DE TRÁMITE</div>
+                            <input type="text" class="form-control" id="num_mandamiento" name="num_mandamiento" value="" required>
+                            
+                          </div>
+                          <div align="right">
+                          <button  type="button" id="validar" class="btn btn-primary btn-perspective">Validar</i></button>
+                          </div>
+                          </label>
+                        </div>
+                      </td>
+                      </tr>
+                
+                    </table>
+                    
+                  </div>
+                </div>  
+                <br>
+                  <div class="from-group" align="center">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}" />
+                     <button type="submit" class="btn btn-primary btn-perspective">Guardar<i class="fa fa-plus"></i></button>
+                  </div>
+                <br>
+
+        </form>
+</div>

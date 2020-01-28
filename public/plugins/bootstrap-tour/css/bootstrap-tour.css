@@ -1,0 +1,49 @@
+/* ========================================================================
+ * bootstrap-tour - v0.11.0
+ * http://bootstraptour.com
+ * ========================================================================
+ * Copyright 2012-2015 Ulrich Sossou
+ *
+ * ========================================================================
+ * Licensed under the MIT License (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://opensource.org/licenses/MIT
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================================
+ */
+.hemi-intro-backdrop {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 500; }
+
+.hemi-intro-selected {
+  z-index: 600;
+  position: relative; }
+
+.hemi-intro-popover {
+  z-index: 600; }
+
+.hemi-intro-buttons-holder {
+  padding: 10px 0; }
+
+  #salirButton{
+    float: left;
+  
+  }
+  
+  #sigButton{
+    float: right;
+  }
+  
+/*# sourceMappingURL=jquery.hemiIntro.css.map */
