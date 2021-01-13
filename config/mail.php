@@ -57,7 +57,7 @@ return [
     */
 
     'from' => [
-        'address' => 'soporteenlinea@medicamentos.gob.sv',
+        'address' => env('MAIL_HOST', 'smtp.mailgun.org'),
         'name' => 'Soporte',
     ],
 
@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'username' => 'soporteenlinea@medicamentos.gob.sv',
+    'username' => env('MAIL_USERNAME'),
 
     /*
     |--------------------------------------------------------------------------
@@ -98,7 +98,7 @@ return [
     |
     */
 
-    'password' => '.P@l@d10$$',
+    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
